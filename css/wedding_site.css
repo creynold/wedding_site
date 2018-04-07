@@ -7,6 +7,8 @@
 body {
   line-height: 1.7em;
   font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  background: #33c3f0;
 }
 
 .content {
@@ -18,6 +20,32 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 2em 0 1em;
+}
+
+.intro {
+  color: white;
+}
+
+.intro-banner {
+  position: fixed;
+  width: 100%;
+  padding-top: 25%;
+  z-index: 1;
+}
+
+.content-wrapper {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+
+.intro>img {
+  width: 100%;
+  display: block;
+}
+
+.intro-head {
+  text-align: center;
 }
 
 .content-1 {
@@ -72,6 +100,10 @@ body {
   .home-menu ul {
     float: right;
   }
+
+  .intro-banner {
+    font-size: 1.5em;
+  }
 }
 
 /*
@@ -84,5 +116,9 @@ body {
     border: 2px solid white;
     padding: 1em 1.6em;
     border-radius: 5px;
+  }
+
+  .intro-banner {
+    font-size: 1em;
   }
 }
