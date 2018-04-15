@@ -39,11 +39,6 @@ body {
   width: 100%;
 }
 
-.intro>img {
-  width: 100%;
-  display: block;
-}
-
 .intro-head {
   text-align: center;
 }
@@ -84,6 +79,10 @@ body {
   border: 2px solid white;
   padding: 1em 1.6em;
   border-radius: 5px;
+}
+
+input {
+  color: black;
 }
 
 /*

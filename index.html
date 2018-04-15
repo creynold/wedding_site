@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/wedding_site.css">
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
 </head>    
 <body>
   <div class="header">
@@ -32,7 +28,7 @@
       <h1 class="intro-head">Laura and Collin</h1>
       <h2 class="intro-head">August 11, 2018 &bull; Louisville, CO</h1>
     </div>
-    <img src="images/iceland.jpg">
+    <img src="images/iceland.jpg" class="pure-img">
   </div>
 
   <div class="content-wrapper">
@@ -44,19 +40,17 @@
       <h2 class="content-head">RSVP</h2>
       <div class="pure-g">
         <div class="pure-u-1">
-          <form class="pure-form rsvp-form">
-            <fieldset class="pure-group">
-              <input type="email" class="pure-input-1" placeholder="Email" required>
-              <input type="text" class="pure-input-1" placeholder="First Name" required>
-              <input type="text" class="pure-input-1" placeholder="Last Name" required>
-            </fieldset>
-            <button type="submit" class="pure-button pure-input-1 pure-button-primary">
-              Enter
-            </button>
-          </form>
+          <rsvp></rsvp>
         </div>
       </div>
     </div>
   </div>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="riot/tag" src="js/rsvp.tag"></script>
+  <script src="https://cdn.jsdelivr.net/npm/riot@3.9/riot+compiler.min.js"></script>
+  <script>riot.mount('rsvp')</script>
 </body>
 </html>
