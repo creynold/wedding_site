@@ -7,8 +7,27 @@
 body {
   line-height: 1.7em;
   font-size: 13px;
-  font-family: 'Raleway', sans-serif;
   background: #33c3f0;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: 'Raleway', sans-serif;
+}
+
+.blackbelly {
+  background: url('/images/bbexteriordusk.jpg') no-repeat fixed center/cover; 
+  color: white;
+}
+
+.butterfly {
+  background: url('/images/butterflypavilion.jpg') no-repeat fixed center/cover; 
+  color: white;
+}
+
+.flatirons {
+  background: url('/images/flatirons.jpg') no-repeat fixed center/cover; 
+  color: white;
 }
 
 .content {
@@ -83,6 +102,36 @@ body {
 
 input {
   color: black;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 130%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map-wrapper {
+  position: relative;
+  padding-bottom: 100%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
