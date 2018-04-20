@@ -110,11 +110,28 @@
     <div class="content content-2">
       <h2 class="content-head">RSVP</h2>
       <div class="pure-g">
-        <div class="pure-u-1">
+        <div class="pure-u-1-3">
           <passphrase></passphrase>
-          <rsvp></rsvp>
+        </div>
+        <div class="pure-u-2-3">
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="pure-u-1">
+            <rsvp></rsvp>
+          </div>
+          <div class="pure-u-1">
+          </div>
+          <div class="pure-u-1">
+            <search></search>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <results></results>
+        </div>
+        <div class="pure-u-1-3">
           <songs></songs>
-          <search></search>
         </div>
       </div>
     </div>
@@ -126,6 +143,7 @@
   <script src="https://cdn.jsdelivr.net/npm/riot@3.9/riot+compiler.min.js"></script>
 
   <script type="riot/tag" src="js/passphrase.tag"></script>
+  <script type="riot/tag" src="js/results.tag"></script>
   <script type="riot/tag" src="js/rsvp.tag"></script>
   <script type="riot/tag" src="js/search.tag"></script>
   <script type="riot/tag" src="js/songs.tag"></script>

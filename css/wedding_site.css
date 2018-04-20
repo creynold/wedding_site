@@ -91,12 +91,8 @@ html, button, input, select, textarea,
   color: #dddddd;
 }
 
-.rsvp-form {
-  width: 33%;
-  margin: auto;
-  border: 2px solid white;
-  padding: 1em 1.6em;
-  border-radius: 5px;
+.pure-menu-heading {
+  color: white;
 }
 
 input {

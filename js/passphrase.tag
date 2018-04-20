@@ -1,12 +1,17 @@
 <passphrase>
-  <form class="pure-form rsvp-form" if={ !passphrase_entered }
-    onsubmit={ submit_passphrase }>
-    <input type="text" class="pure-input-1" placeholder="Invite Passphrase"
-      ref="passphrase" required>
-    <button type="submit" class="pure-button pure-input-1 pure-button-primary">
-      Enter
-    </button>
-  </form>
+  <div class="pure-g">
+    <div class="pure-u-1" if={ !passphrase_entered }>
+      <p>Enter the passphrase from your invitation:</p>
+    </div>
+    <form class="pure-form pure-u-1" if={ !passphrase_entered }
+      onsubmit={ submit_passphrase }>
+      <input type="text" class="pure-input-1" placeholder="Invite Passphrase"
+        ref="passphrase" required>
+      <button type="submit" class="pure-button pure-input-1 pure-button-primary">
+        Enter
+      </button>
+    </form>
+  </div>
 
   <script>
     submit_passphrase(e) {

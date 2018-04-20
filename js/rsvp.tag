@@ -9,8 +9,13 @@
       <input type="text" class="pure-input-1" placeholder="Last Name"
         value={ last_name } ref="last_name" required/>
     </fieldset>
+    <div class="pure-control-group">
+      <input type="number" id="num_attending" class="pure-input-1-4"
+        value={ num_attending} ref="num_attending"/>
+      <label for="num_attending">Number Attending</label>
+    </div>
     <button type="submit" class="pure-button pure-input-1 pure-button-primary">
-      Enter
+      RSVP
     </button>
   </form>
 
@@ -21,6 +26,7 @@
       this.first_name = invite.first_name;
       this.last_name = invite.last_name;
       this.email = invite.email;
+      this.num_attending = invite.num_attending;
       this.update();
     }.bind(this));
 
@@ -40,6 +46,7 @@
           first_name: this.refs.first_name.value,
           last_name: this.refs.last_name.value,
           email: this.refs.email.value,
+          num_attending: this.refs.num_attending.value,
           pass_code: this.passphrase
         }),
         success: function(response) {

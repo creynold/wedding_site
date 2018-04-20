@@ -31,9 +31,21 @@
       this.update();
     }.bind(this));
 
+    var find_song_index = function(song_id) {
+      for (var i = 0; i < this.requested_tracks.length; i++) {
+        if (this.requested_tracks[i].song_id == response.song_id) {
+          return i;
+        }
+      }
+      return -1;
+    }.bind(this);
+
     riot.store.on('add_track', function(track) {
-      this.requested_tracks.push(track);
-      this.update();
+      var index = find_song_index(track.song_id);
+      if (index < 0) {
+        this.requested_tracks.push(track);
+        this.update();
+      }
     }.bind(this));
 
     delete_track(e) {
@@ -47,12 +59,8 @@
           'pass_code': this.passphrase
         }),
         success: function(response) {
-          for (var i = 0; i < this.requested_tracks.length; i++) {
-            if (this.requested_tracks[i].song_id == response.song_id) {
-              this.requested_tracks.splice(i, 1);
-              break;
-            }
-          }
+          var index = find_song_index(response.song_id);
+          this.requested_tracks.splice(index, 1);
           this.update();
         }.bind(this)
       });
