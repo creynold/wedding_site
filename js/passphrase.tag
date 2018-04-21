@@ -1,12 +1,12 @@
 <passphrase>
   <div class="pure-g">
-    <div class="pure-u-1" if={ !passphrase_entered }>
+    <div class="pure-u-1" if={ active === 'passphrase' }>
       <p>Enter the passphrase from your invitation:</p>
     </div>
-    <form class="pure-form pure-u-1" if={ !passphrase_entered }
+    <form class="pure-form pure-u-1" if={ active === 'passphrase' }
       onsubmit={ submit_passphrase }>
       <input type="text" class="pure-input-1" placeholder="Invite Passphrase"
-        ref="passphrase" required>
+        ref="passphrase" value={ passphrase } required>
       <button type="submit" class="pure-button pure-input-1 pure-button-primary">
         Enter
       </button>
@@ -14,17 +14,22 @@
   </div>
 
   <script>
+    this.active = 'passphrase';
+
+    riot.store.on('change_state', function(state) {
+      this.active = state;
+      this.update()
+    }.bind(this));
+
     submit_passphrase(e) {
       e.preventDefault();
       this.passphrase = this.refs.passphrase.value;
 
-      riot.store.trigger('entered_passphrase', this.passphrase);
-
       $.get('backend/invites', {'pass_code': this.passphrase},
         function (response) {
-          this.passphrase_entered = true;
           riot.store.trigger('valid_passphrase', this.passphrase);
           riot.store.trigger('got_invite', response);
+          riot.store.trigger('change_state', 'rsvp');
           this.update();
         }.bind(this)
       );

@@ -87,8 +87,17 @@ html, button, input, select, textarea,
   background: #bababa;
 }
 
+.song-data {
+  background-color: rgba(0,0,0,.5);
+}
+
+.song-request-heading {
+  padding-left: 0;
+  margin-top: -10px;
+}
+
 .pure-menu-link {
-  color: #dddddd;
+  color: white;
 }
 
 .pure-menu-heading {
@@ -158,14 +167,6 @@ input {
  * Mobile-only
  */
 @media (max-width: 48em) {
-  .rsvp-form {
-    width: 100%;
-    margin: auto;
-    border: 2px solid white;
-    padding: 1em 1.6em;
-    border-radius: 5px;
-  }
-
   .intro-banner {
     font-size: 1em;
     padding-top: 50%;
@@ -173,5 +174,11 @@ input {
 
   .large-intro-image {
     display:none;
+  }
+
+  .song-list {
+    height: 348px;
+    border: 1px solid gray;
+    border-radius: 4px;
   }
 }

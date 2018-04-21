@@ -1,9 +1,9 @@
 <search>
   <div class="pure-g">
-    <div class="pure-u-1" if={ passphrase_entered }>
+    <div class="pure-u-1" if={ active === 'song_request' }>
       <p>Search for songs to request:</p>
     </div>
-    <form class="pure-form pure-u-1" if={ passphrase_entered }
+    <form class="pure-form pure-u-1" if={ active === 'song_request' }
       onsubmit={ query_lastfm }>
       <fieldset class="pure-group">
         <input type="text" class="pure-input-1" placeholder="Track title"
@@ -18,9 +18,13 @@
   </div>
 
   <script>
+    riot.store.on('change_state', function(state) {
+      this.active = state;
+      this.update()
+    }.bind(this));
+
     riot.store.on('valid_passphrase', function(passphrase) {
       this.passphrase = passphrase;
-      this.passphrase_entered = true;
       this.update();
     }.bind(this));
 

@@ -1,5 +1,6 @@
 <results>
-  <div class="pure-menu" if={ tracks }>
+  <div class="pure-menu pure-menu-scrollable song-list"
+    if={ tracks && active === 'song_request' }>
     <span class="pure-menu-heading">Search Results (click to add request)</span>
 
     <ul class="pure-menu-list">
@@ -8,7 +9,7 @@
           <div class="pure-u-1-5">
             <img src={ image_url } />
           </div>
-          <div class="pure-u-4-5">
+          <div class="pure-u-4-5 song-data">
             <p> Title: { track } </p>
             <p> Artist: { artist } </p>
             <p if={ album }> Album: { album } </p>
@@ -19,6 +20,11 @@
   </div>
 
   <script>
+    riot.store.on('change_state', function(state) {
+      this.active = state;
+      this.update()
+    }.bind(this));
+
     riot.store.on('valid_passphrase', function(passphrase) {
       this.passphrase = passphrase;
       this.update();

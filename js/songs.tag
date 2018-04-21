@@ -1,14 +1,22 @@
 <songs>
-  <div class="pure-menu" if={ requested_tracks.length }>
-    <span class="pure-menu-heading">Requested Songs</span>
+  <div class="pure-menu pure-menu-scrollable song-list"
+    if={ requested_tracks.length &&
+      (active === 'confirm' || active === 'song_request') }>
+    <span class="pure-menu-link song-request-heading" onclick={ toggleOpen }>
+      Number of songs requested: { requested_tracks.length } (Click to 
+      { open ? 'hide' : 'show' })
+    </span>
 
-    <ul class="pure-menu-list">
+    <ul class="pure-menu-list" if={ open }>
+      <li class="pure-menu-item">
+        <p> Click songs to remove </p>
+      </li>
       <li each={ requested_tracks } class="pure-menu-item">
         <a class="pure-menu-link" onclick={ parent.delete_track }>
           <div class="pure-u-1-5">
             <img src={ image_url } />
           </div>
-          <div class="pure-u-4-5">
+          <div class="pure-u-4-5 song-data">
             <p> Title: { track } </p>
             <p> Artist: { artist } </p>
             <p if={ album }> Album: { album } </p>
@@ -20,6 +28,12 @@
 
   <script>
     this.requested_tracks = [];
+    this.open = false;
+
+    riot.store.on('change_state', function(state) {
+      this.active = state;
+      this.update()
+    }.bind(this));
 
     riot.store.on('valid_passphrase', function(passphrase) {
       this.passphrase = passphrase;
@@ -33,7 +47,7 @@
 
     var find_song_index = function(song_id) {
       for (var i = 0; i < this.requested_tracks.length; i++) {
-        if (this.requested_tracks[i].song_id == response.song_id) {
+        if (this.requested_tracks[i].song_id == song_id) {
           return i;
         }
       }
@@ -47,6 +61,10 @@
         this.update();
       }
     }.bind(this));
+
+    toggleOpen(e) {
+      this.open = !this.open;
+    }
 
     delete_track(e) {
       var track = e.item;
