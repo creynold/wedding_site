@@ -6,7 +6,7 @@
     <form class="pure-form pure-u-1" if={ active === 'song_request' }
       onsubmit={ query_lastfm }>
       <fieldset class="pure-group">
-        <input type="text" class="pure-input-1" placeholder="Track title"
+        <input type="text" class="pure-input-1" placeholder="Track title (required)"
           ref="track" required/>
         <input type="text" class="pure-input-1" placeholder="Artist"
           ref="artist" />
