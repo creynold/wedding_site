@@ -28,7 +28,7 @@
 
   <script>
     this.requested_tracks = [];
-    this.open = false;
+    this.open = true;
 
     riot.store.on('change_state', function(state) {
       this.active = state;

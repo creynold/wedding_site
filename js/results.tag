@@ -1,4 +1,8 @@
 <results>
+  <div if={ !tracks && active === 'song_request' }>
+    <p> We want to hear what you want to hear! <p>
+    <p> Request some songs by searching to the left.<p>
+  </div>
   <div class="pure-menu pure-menu-scrollable song-list"
     if={ tracks && active === 'song_request' }>
     <span class="pure-menu-heading">Search Results (click to add request)</span>

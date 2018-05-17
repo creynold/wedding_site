@@ -41,9 +41,6 @@
       if (invite.num_attending > 0) {
         this.attending = true;
       }
-      if (invite.first_name) {
-        riot.store.trigger('rsvp', invite.num_attending);
-      }
       this.update();
     }.bind(this));
 
@@ -75,7 +72,6 @@
         }),
         success: function(response) {
           riot.store.trigger('got_invite', response);
-          riot.store.trigger('rsvp', response.num_attending);
         }
      });
     }

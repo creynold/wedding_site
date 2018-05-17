@@ -28,10 +28,13 @@
 
     this.state_index = 0;
 
-    riot.store.on('rsvp', function(num_attending) {
-      this.num_attending = num_attending;
-      this.rsvped = true;
-      this.update();
+    riot.store.on('got_invite', function(invite) {
+      if (invite.first_name) {
+        this.rsvped = true;
+        this.num_attending = invite.num_attending;
+        this.update();
+        this.next();
+      }
     }.bind(this));
 
     riot.store.on('change_state', function(state) {
@@ -60,8 +63,7 @@
         || this.state_index >= this.states.length - 1;
     }
 
-    next(e) {
-      e.preventDefault();
+    next() {
       if (!this.next_disabled()) {
         do {
           this.state_index++;
@@ -69,6 +71,11 @@
         riot.store.trigger('change_state', this.states[this.state_index]);
         this.update();
       }
+    }
+
+    next_button(e) {
+      e.preventDefault();
+      this.next();
     }
 
     back(e) {
