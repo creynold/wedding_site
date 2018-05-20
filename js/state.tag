@@ -1,18 +1,12 @@
 <state>
-  <div class="pure-g">
-    <div class="pure-u-1-2" if={ passphrase_entered }>
-      <button class="pure-button pure-u-1
-      { pure-button-disabled: this.state_index <= 0 }" onclick={ back }>
-        Back
-      </button>
-    </div>
-    <div class="pure-u-1-2" if={ passphrase_entered }>
-      <button class="pure-button pure-u-1
-        { pure-button-disabled: next_disabled() }" onclick={ next }>
-        Next
-      </button>
-    </div>
-  </div>
+  <button class="btn btn-secondary
+  { pure-button-disabled: this.state_index <= 0 }" onclick={ back } if={ passphrase_entered }>
+    Back
+  </button>
+  <button class="btn btn-secondary
+    { pure-button-disabled: next_disabled() }" onclick={ next } if={ passphrase_entered }>
+    Next
+  </button>
 
   <script>
     this.passphrase_entered = false;
@@ -41,6 +35,15 @@
       this.state_index = this.states.indexOf(state);
       if (this.state_index < 0) {
         this.state_index = 0;
+      }
+      if (state === 'song_request' || state === 'confirm') {
+       $('#rsvpDialog').css({
+              width:'80%'
+       });
+      } else {
+       $('#rsvpDialog').css({
+              width:''
+       });
       }
       this.update();
     }.bind(this));

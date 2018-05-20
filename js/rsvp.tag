@@ -10,14 +10,18 @@
         value={ last_name } ref="last_name" required/>
     </fieldset>
     <div class="pure-control-group">
+      <div class="btn-group-toggle" data-toggle="buttons">
+        <label class="btn pure-button pure-button-primary { pure-button-active: attending }" onclick={ toggle_attend }>
+          <input id="attending" type="radio" checked={ attending }/> Yes! I'm attending
+        </label>
+        <label class="btn pure-button pure-button-primary { pure-button-active: !attending }" onclick={ toggle_not_attend }>
+          <input id="attending" type="radio" checked={ !attending }/> I am deeply saddened but cannot attend
+        </label>
+      </div>
       <input type="number" id="num_attending" class="pure-input-1-4"
         value={ attending ? num_attending : 0} min={ attending ? 1 : 0}
         max={ attending ? 10 : 0} ref="num_attending" disabled={ !attending }/>
       <label for="num_attending">Number Attending</label>
-      <label for="attending" class="pure-checkbox">
-        <input id="attending" type="checkbox" checked={ attending }
-          onclick={ toggle_attend }/> Yes! I'm attending
-      </label>
     </div>
     <button type="submit" class="pure-button pure-input-1 pure-button-primary">
       RSVP
@@ -50,10 +54,15 @@
     }.bind(this));
 
     toggle_attend(e) {
-      this.attending = !this.attending;
-      if (this.attending && this.num_attending <= 0) {
+      this.attending = true;
+      if (this.num_attending <= 0) {
         this.num_attending = 1;
       }
+      this.update();
+    }
+
+    toggle_not_attend(e) {
+      this.attending = false;
       this.update();
     }
 

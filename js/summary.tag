@@ -3,6 +3,8 @@
     <p> We're looking forward to seeing you! </p>
     <p> Attendee: { first_name } { last_name } </p>
     <p> Number attending: { num_attending } </p>
+    <p> (If you want to request more songs later just click the RSVP button
+    again) </p>
   </div>
   <div class="pure-u-1" if={ active === 'confirm' && num_attending <= 0 }>
     <p> We're sorry you can't make it! </p>

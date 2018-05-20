@@ -2,21 +2,14 @@
   <div class="pure-menu pure-menu-scrollable song-list"
     if={ requested_tracks.length &&
       (active === 'confirm' || active === 'song_request') }>
-    <span class="pure-menu-link song-request-heading" onclick={ toggleOpen }>
-      Number of songs requested: { requested_tracks.length } (Click to 
-      { open ? 'hide' : 'show' })
-    </span>
-
-    <ul class="pure-menu-list" if={ open }>
-      <li class="pure-menu-item">
-        <p> Click songs to remove </p>
-      </li>
+    <span class="pure-menu-heading" style="color:black">Songs requested: (click to remove songs)</span>
+    <ul class="pure-menu-list">
       <li each={ requested_tracks } class="pure-menu-item">
         <a class="pure-menu-link" onclick={ parent.delete_track }>
-          <div class="pure-u-1-5">
+          <div class="pure-u-2-5">
             <img src={ image_url } />
           </div>
-          <div class="pure-u-4-5 song-data">
+          <div class="pure-u-3-5 song-data">
             <p> Title: { track } </p>
             <p> Artist: { artist } </p>
             <p if={ album }> Album: { album } </p>
@@ -28,7 +21,6 @@
 
   <script>
     this.requested_tracks = [];
-    this.open = true;
 
     riot.store.on('change_state', function(state) {
       this.active = state;
@@ -61,10 +53,6 @@
         this.update();
       }
     }.bind(this));
-
-    toggleOpen(e) {
-      this.open = !this.open;
-    }
 
     delete_track(e) {
       var track = e.item;

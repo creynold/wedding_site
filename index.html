@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/wedding_site.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>    
 <body>
   <div class="header">
@@ -17,7 +19,9 @@
       <a href="#" class="pure-menu-heading pure-menu-link">Collin & Laura</a>
       <ul class="pure-menu-list">
         <li class="pure-menu-item">
-          <a href="#rsvp" class="pure-menu-link">RSVP</a>
+          <button type="button" class="pure-menu-link" data-toggle="modal" data-target="#rsvpModal">
+            RSVP
+          </button>
         </li>
       </ul>
     </div>
@@ -104,20 +108,32 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="rsvp" class="content content-2">
-      <h2 class="content-head">RSVP</h2>
-      <div class="pure-g">
-        <div class="pure-u-md-1-2 pure-u-1">
-          <passphrase></passphrase>
-          <rsvp></rsvp>
-          <search></search>
-          <summary></summary>
-          <songs></songs>
-          <state></state>
+  <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" id="rsvpDialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <passphrase></passphrase>
+              <rsvp></rsvp>
+            </div>
+          </div>
+          <div class="pure-g">
+            <div class="pure-u-md-1-2 pure-u-1">
+              <search></search>
+              <summary></summary>
+              <songs></songs>
+            </div>
+            <div class="pure-u-md-1-2 pure-u-1">
+              <results></results>
+            </div>
+          </div>
         </div>
-        <div class="pure-u-md-1-2 pure-u-1">
-          <results></results>
+        <div class="modal-footer">
+          <state></state>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -141,5 +157,7 @@
     riot.store = new Store()
     riot.mount('*')
   </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -11,9 +11,14 @@
         <input type="text" class="pure-input-1" placeholder="Artist"
           ref="artist" />
       </fieldset>
-      <button type="submit" class="pure-button pure-input-1 pure-button-primary">
-        Search
-      </button>
+      <div class="pure-u-1">
+        <button type="submit" class="pure-button pure-button-primary">
+          Search
+        </button>
+        <button class="pure-button" onclick={ done } >
+          Done picking songs!
+        </button>
+      </div>
     </form>
   </div>
 
@@ -38,6 +43,11 @@
           riot.store.trigger('search_results', response.tracks);
         }.bind(this)
       );
+    }
+
+    done(e) {
+      e.preventDefault();
+      riot.store.trigger('change_state', 'confirm');
     }
   </script>
 </search>
