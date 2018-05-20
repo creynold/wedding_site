@@ -11,10 +11,10 @@
     </fieldset>
     <div class="pure-control-group">
       <div class="btn-group-toggle" data-toggle="buttons">
-        <label class="btn pure-button pure-button-primary { pure-button-active: attending }" onclick={ toggle_attend }>
+        <label class="btn pure-button { pure-button-primary:attending } { pure-button-active:attending }" onclick={ toggle_attend }>
           <input id="attending" type="radio" checked={ attending }/> Yes! I'm attending
         </label>
-        <label class="btn pure-button pure-button-primary { pure-button-active: !attending }" onclick={ toggle_not_attend }>
+        <label class="btn pure-button { pure-button-primary:!attending } { pure-button-active:!attending }" onclick={ toggle_not_attend }>
           <input id="attending" type="radio" checked={ !attending }/> I am deeply saddened but cannot attend
         </label>
       </div>

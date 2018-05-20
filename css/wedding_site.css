@@ -15,8 +15,22 @@ html, button, input, select, textarea,
   font-family: 'Raleway', sans-serif;
 }
 
+table {
+  font-family: 'Raleway', sans-serif;
+}
+
+table, tbody, tr, td,
+.pure-table tr, .pure-table td, .pure-table {
+  border: none;
+}
+
 p {
   padding-left: 10px;
+  font-size: 1.1em;
+}
+
+.main-text {
+  font-size: 1.4em;
 }
 
 .blackbelly {
@@ -24,13 +38,53 @@ p {
   color: white;
 }
 
+.blackbelly-content {
+  background-color: rgba(150,150,150,.5);
+  color: white;
+}
+
+.our-story {
+  background: url('/images/our_story.jpg') no-repeat fixed center/cover; 
+  color: black;
+}
+
+.our-story-content {
+  background-color: rgba(255,255,255,.4);
+}
+
 .butterfly {
   background: url('/images/butterflypavilion.jpg') no-repeat fixed center/cover; 
   color: white;
 }
 
+.butterfly-content {
+  background-color: rgba(150,150,150,.8);
+  color: white;
+}
+
+.schedule {
+  background: url('/images/bubbles.jpg') no-repeat fixed center/cover; 
+  color: white;
+}
+
+.schedule-events {
+  background-color: rgba(150,150,150,.8);
+  color: white;
+  font-size: 1.7em;
+}
+
 .flatirons {
   background: url('/images/flatirons.jpg') no-repeat fixed center/cover; 
+  color: white;
+}
+
+.flatirons-content {
+  background-color: rgba(0,0,0,.4);
+  color: white;
+}
+
+.save-the-date {
+  background: url('/images/neko.jpg') no-repeat fixed center/cover; 
   color: white;
 }
 
@@ -65,14 +119,27 @@ p {
   text-align: center;
 }
 
-.content-1 {
-  background: #96bdff;
+.content-divider {
+  padding-top: .4em;
+  background: #99ccff;
   color: black;
 }
 
-.content-2 {
-  background: #5170a3;
-  color: white;
+.rsvp-header-button {
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.rsvp-header-button:hover {
+  background-color: rgba(255,255,255,.2);
+}
+
+.rsvp-header-button:active {
+  background-color: rgba(255,255,255,.5);
+}
+
+.rsvp-header-button:focus {
+  outline: 0;
 }
 
 .home-menu {
@@ -103,6 +170,10 @@ p {
   color: black;
 }
 
+.song-data p {
+  font-size: 14px;
+}
+
 .result-heading {
   color: black;
 }
@@ -110,10 +181,6 @@ p {
 .song-request-heading {
   padding-left: 0;
   margin-top: -10px;
-}
-
-.pure-menu-link {
-  color: white;
 }
 
 .pure-menu-heading {
@@ -144,6 +211,8 @@ input {
   padding-bottom: 100%; /* 16:9 */
   padding-top: 25px;
   height: 0;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .map-wrapper iframe {

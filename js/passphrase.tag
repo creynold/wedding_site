@@ -11,6 +11,9 @@
         Enter
       </button>
     </form>
+    <div class="pure-u-1 alert alert-danger" if={ error_message }>
+      { error_message }
+    </div>
   </div>
 
   <script>
@@ -24,6 +27,7 @@
     submit_passphrase(e) {
       e.preventDefault();
       this.passphrase = this.refs.passphrase.value;
+      this.error_message = null;
 
       $.get('backend/invites', {'pass_code': this.passphrase},
         function (response) {
@@ -32,7 +36,12 @@
           riot.store.trigger('change_state', 'rsvp');
           this.update();
         }.bind(this)
-      );
+      )
+      .fail(function(response) {
+        this.error_message = response.responseJSON.title;
+        console.log(response.responseJSON.title);
+        this.update();
+      }.bind(this));
 
       $.get('backend/songs', {'pass_code': this.passphrase},
         function (response) {
