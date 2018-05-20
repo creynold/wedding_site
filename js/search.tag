@@ -18,6 +18,10 @@
         <button class="pure-button" onclick={ done } >
           Done picking songs!
         </button>
+        <a href="https://www.last.fm" class="last-fm-link">
+          Powered by
+          <img src='https://cdn.last.fm/flatness/badges/lastfm_black_small.gif'>
+        </a>
       </div>
     </form>
   </div>
