@@ -33,37 +33,17 @@ p {
   font-size: 1.4em;
 }
 
-.blackbelly {
-  background: url('/images/bbexteriordusk.jpg') no-repeat fixed center/cover; 
-  color: white;
-}
-
 .blackbelly-content {
   background-color: rgba(150,150,150,.5);
   color: white;
-}
-
-.our-story {
-  background: url('/images/our_story.jpg') no-repeat fixed center/cover; 
-  color: black;
 }
 
 .our-story-content {
   background-color: rgba(255,255,255,.4);
 }
 
-.butterfly {
-  background: url('/images/butterflypavilion.jpg') no-repeat fixed center/cover; 
-  color: white;
-}
-
 .butterfly-content {
   background-color: rgba(150,150,150,.8);
-  color: white;
-}
-
-.schedule {
-  background: url('/images/bubbles.jpg') no-repeat fixed center/cover; 
   color: white;
 }
 
@@ -73,18 +53,8 @@ p {
   font-size: 1.7em;
 }
 
-.flatirons {
-  background: url('/images/flatirons.jpg') no-repeat fixed center/cover; 
-  color: white;
-}
-
 .flatirons-content {
   background-color: rgba(0,0,0,.4);
-  color: white;
-}
-
-.save-the-date {
-  background: url('/images/neko.jpg') no-repeat fixed center/cover; 
   color: white;
 }
 
@@ -255,6 +225,36 @@ input {
   .small-intro-image {
     display:none;
   }
+
+  .blackbelly {
+    background: url('/images/bbexteriordusk.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .our-story {
+    background: url('/images/our_story.jpg') no-repeat fixed center/cover; 
+    color: black;
+  }
+  
+  .butterfly {
+    background: url('/images/butterflypavilion.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .schedule {
+    background: url('/images/bubbles.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .flatirons {
+    background: url('/images/flatirons.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .save-the-date {
+    background: url('/images/neko.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
 }
 
 /*
@@ -272,5 +272,35 @@ input {
 
   .song-list {
     max-height: 348px;
+  }
+
+  .blackbelly {
+    background: url('/images/bbexteriordusk_mobile.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .our-story {
+    background: url('/images/our_story_mobile.jpg') no-repeat fixed center/cover; 
+    color: black;
+  }
+  
+  .butterfly {
+    background: url('/images/butterflypavilion_mobile.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .schedule {
+    background: url('/images/bubbles_mobile.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .flatirons {
+    background: url('/images/flatirons_mobile.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+  
+  .save-the-date {
+    background: url('/images/neko_mobile.jpg') no-repeat fixed center/cover; 
+    color: white;
   }
 }
