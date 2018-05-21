@@ -30,7 +30,8 @@
 
   <script>
     this.passphrase = '';
-    this.attending = false;
+    this.attending = true;
+    this.num_attending = 1;
 
     riot.store.on('change_state', function(state) {
       this.active = state;
