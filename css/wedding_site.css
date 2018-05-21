@@ -130,6 +130,23 @@ p {
   font-weight: 400;
 }
 
+.pure-menu-link {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.pure-menu-link:hover {
+  color: white;
+}
+
+.menu-rsvp-button:focus {
+  outline: 0;
+}
+
+.menu-rsvp-button {
+  background-color: rgba(150,150,150,1.0);
+}
+
 .home-menu li a:hover,
 .home-menu li a:focus,
 .home-menu .pure-menu-link:hover,
