@@ -42,13 +42,9 @@
       this.first_name = invite.first_name;
       this.last_name = invite.last_name;
       this.email = invite.email;
-      this.num_attending = invite.num_attending;
+      this.num_attending = invite.num_attending === null ? 1 : invite.num_attending;
       if (invite.num_attending > 0) {
         this.attending = true;
-      }
-
-      if (invite.first_name.length <= 0) {
-        this.num_attending = 1;
       }
       this.update();
     }.bind(this));
