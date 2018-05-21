@@ -46,6 +46,10 @@
       if (invite.num_attending > 0) {
         this.attending = true;
       }
+
+      if (invite.first_name.length <= 0) {
+        this.num_attending = 1;
+      }
       this.update();
     }.bind(this));
 
