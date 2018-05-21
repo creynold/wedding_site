@@ -15,7 +15,7 @@
           <input id="attending" type="radio" checked={ attending }/> Yes! I'm attending
         </label>
         <label class="btn pure-button { pure-button-primary:!attending } { pure-button-active:!attending }" onclick={ toggle_not_attend }>
-          <input id="attending" type="radio" checked={ !attending }/> I am deeply saddened but cannot attend
+          <input id="attending" type="radio" checked={ !attending }/> I am deeply saddened I cannot attend
         </label>
       </div>
       <input type="number" id="num_attending" class="pure-input-1-4"

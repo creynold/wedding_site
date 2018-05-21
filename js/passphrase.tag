@@ -6,7 +6,7 @@
     <form class="pure-form pure-u-1" if={ active === 'passphrase' }
       onsubmit={ submit_passphrase }>
       <input type="text" class="pure-input-1" placeholder="Invite Passphrase"
-        ref="passphrase" value={ passphrase } required>
+        ref="passphrase" value={ passphrase } id="passphraseInput" required>
       <button type="submit" class="pure-button pure-input-1 pure-button-primary">
         Enter
       </button>
@@ -49,5 +49,9 @@
         }.bind(this)
       );
     }
+
+    $('#rsvpModal').on('shown.bs.modal', function() {
+      $(this).find('#passphraseInput').focus();
+    });
   </script>
 </passphrase>
