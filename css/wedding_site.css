@@ -271,7 +271,7 @@ input {
 
   .intro-banner {
     font-size: 1.5em;
-    padding-top: 25%;
+    padding-top: 30vh;
   }
 
   .small-intro-image {
@@ -315,7 +315,7 @@ input {
 @media (max-width: 48em) {
   .intro-banner {
     font-size: 1em;
-    padding-top: 50%;
+    padding-top: 30vh;
   }
 
   .to-do-section p {
