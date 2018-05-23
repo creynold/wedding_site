@@ -278,6 +278,10 @@ input {
     display:none;
   }
 
+  .large-intro-image {
+    min-width: 100%;
+  }
+
   .blackbelly {
     background: url('/images/bbexteriordusk.jpg') no-repeat fixed center/cover; 
     color: white;
