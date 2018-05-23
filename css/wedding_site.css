@@ -24,13 +24,12 @@ table, tbody, tr, td,
   border: none;
 }
 
-p {
-  padding-left: 10px;
-  font-size: 1.1em;
+.pure-table td {
+  vertical-align: top;
 }
 
-.main-text {
-  font-size: 1.4em;
+p {
+  padding-left: 10px;
 }
 
 .blackbelly-content {
@@ -50,11 +49,10 @@ p {
 .schedule-events {
   background-color: rgba(150,150,150,.8);
   color: white;
-  font-size: 1.7em;
 }
 
 .flatirons-content {
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(50,50,50,.8);
   color: white;
 }
 
@@ -219,12 +217,45 @@ input {
   height: 100%;
 }
 
+.to-do-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.to-do-subsection {
+  padding-left: 3%;
+}
+
+.to-do-section p {
+  padding-left: 3%;
+}
+
+.to-do-section h4 {
+}
+
 /*
  * Tablet and up
  */
 @media (min-width: 48em) {
   body {
     font-size: 16px;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .main-text {
+    font-size: 1.4em;
+  }
+
+  .schedule-events {
+    font-size: 1.7em;
+  }
+
+  .to-do-section h5 {
+    font-size: .8em;
   }
 
   .home-menu {
@@ -281,6 +312,11 @@ input {
   .intro-banner {
     font-size: 1em;
     padding-top: 50%;
+  }
+
+  .to-do-section p {
+    padding-left: 3%;
+    font-size: 1.2em;
   }
 
   .large-intro-image {
