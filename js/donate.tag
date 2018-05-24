@@ -13,12 +13,12 @@ contribute to our honeymoon or donate to a charity in our name: </p>
     <h3>Charities we support:</h3>
     <div class="charities">
       <p>
-        <a href="https://act.nrdc.org/donate/one-time-gift">
+        <a href="https://act.nrdc.org/donate/one-time-gift" target="_blank">
           <img src="images/nrdc.png" class="pure-img">
         </a>
       </p>
       <p>
-        <a href="https://www.weareplannedparenthood.org/onlineactions/2U7UN1iNhESWUfDs4gDPNg2">
+        <a href="https://www.weareplannedparenthood.org/onlineactions/2U7UN1iNhESWUfDs4gDPNg2" target="_blank">
           <img src="images/pp.svg" class="pure-img pp-logo">
         </a>
       </p>
