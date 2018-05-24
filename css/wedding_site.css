@@ -123,6 +123,18 @@ p {
   width: 40px;
 }
 
+.paypal-logo {
+  width: 100px;
+}
+
+.pp-logo {
+  background-color: #005DA6;
+}
+
+.charities {
+  width: 80%;
+}
+
 .home-menu {
   background: #919191;
 }
