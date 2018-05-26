@@ -60,6 +60,11 @@ p {
   color: white;
 }
 
+.registry-content {
+  background-color: rgba(255,255,255,.8);
+  color: black;
+}
+
 .content {
   padding: 1em 1em 3em;
 }
@@ -323,6 +328,11 @@ input {
     background: url('/images/neko.jpg') no-repeat fixed center/cover; 
     color: white;
   }
+
+  .registry {
+    background: url('/images/wildlife.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
 }
 
 /*
@@ -374,6 +384,11 @@ input {
   
   .save-the-date {
     background: url('/images/neko_mobile.jpg') no-repeat fixed center/cover; 
+    color: white;
+  }
+
+  .registry {
+    background: url('/images/wildlife-mobile.jpg') no-repeat fixed center/cover; 
     color: white;
   }
 }
