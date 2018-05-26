@@ -333,6 +333,14 @@ input {
     background: url('/images/wildlife.jpg') no-repeat fixed center/cover; 
     color: white;
   }
+
+  .our-story-content {
+    line-height: 1.7em;
+  }
+
+  .our-story-content p {
+    padding-top: 10px;
+  }
 }
 
 /*
