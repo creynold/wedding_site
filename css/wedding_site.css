@@ -65,6 +65,10 @@ p {
   color: black;
 }
 
+.registry-content img {
+  max-width: 60%;
+}
+
 .content {
   padding: 1em 1em 3em;
 }
